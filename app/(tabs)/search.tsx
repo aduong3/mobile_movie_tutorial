@@ -36,7 +36,7 @@ const search = () => {
 
   useEffect(() => {
     const func = async () => {
-      if (Array.isArray(movies) && movies?.length > 0)
+      if (Array.isArray(movies) && movies?.length > 0 && searchQuery.trim())
         await updateSearchCount(searchQuery, movies[0]);
     };
     func();
